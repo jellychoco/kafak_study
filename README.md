@@ -15,12 +15,14 @@ This repository demonstrates a distributed logging system using Kafka. The proje
    - Make sure Docker is turned on and running on your desktop.
 
 2. **Install Dependencies**:
+   - Move to Server folder with `cd server`
    - Run `yarn install` or `npm install` to install the necessary dependencies.
 
-3. **Start the Project**:
+4. **Start the Project**:
+   
    - Run `yarn start` or `npm start` to start all services.
    - Wait for a few seconds for everything to initialize.
 
-4. **View Logs**:
+5. **View Logs**:
    - The web-based UI will automatically open in your default browser. If not, manually navigate to `http://127.0.0.1:5500/Front/index.html` to view the logs in real-time.
 
