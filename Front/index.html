@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Real-Time Log Viewer</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+            #logs {
+                border: 1px solid #ccc;
+                padding: 10px;
+                height: 300px;
+                overflow-y: scroll;
+                background: #f9f9f9;
+            }
+            .log-entry {
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Real-Time Log Viewer</h1>
+        <div id="logs"></div>
+
+        <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+
+        <script>
+            const socket = io('http://localhost:4000');
+            const logsDiv = document.getElementById('logs');
+
+            socket.on('log', (log) => {
+                console.log(log, 'hi?');
+                const div = document.createElement('div');
+                div.className = 'log-entry';
+                div.textContent = `[${log.timestamp}] ${log.type}: ${log.message}`;
+                logsDiv.appendChild(div);
+            });
+        </script>
+    </body>
+</html>
