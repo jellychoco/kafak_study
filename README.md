@@ -1,10 +1,6 @@
-# Kafka Logging System
-
 ## Overview
 
-This repository demonstrates a distributed logging system using Kafka. 
-The project involves multiple Node.js servers (`loginServer`, `profileServer`, `settingsServer`) that 
-generate event logs, which are collected via Kafka and displayed in real-time using a web(html).
+This repository demonstrates a distributed logging system using Kafka. The project involves multiple Node.js servers (`loginServer`, `profileServer`, `settingsServer`) that generate event logs. These logs are collected via Kafka and displayed in real-time using a web-based UI (HTML).
 
 ## Features
 
@@ -13,8 +9,18 @@ generate event logs, which are collected via Kafka and displayed in real-time us
 - **Real-Time Log Monitoring**: Logs can be monitored in real-time via a web UI using WebSocket.
 - **Docker Support**: Easily deploy Kafka and Zookeeper using Docker.
 
-## How to start
-- Turn on Docker on your desktop
-- yarn or npm install
-- yarn start or npm start
-- And waiting for few seconds
+## How to Start
+
+1. **Ensure Docker is Running**:
+   - Make sure Docker is turned on and running on your desktop.
+
+2. **Install Dependencies**:
+   - Run `yarn install` or `npm install` to install the necessary dependencies.
+
+3. **Start the Project**:
+   - Run `yarn start` or `npm start` to start all services.
+   - Wait for a few seconds for everything to initialize.
+
+4. **View Logs**:
+   - The web-based UI will automatically open in your default browser. If not, manually navigate to `http://127.0.0.1:5500/Front/index.html` to view the logs in real-time.
+
