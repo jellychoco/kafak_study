@@ -32,7 +32,6 @@
             const logsDiv = document.getElementById('logs');
 
             socket.on('log', (log) => {
-                console.log(log, 'hi?');
                 const div = document.createElement('div');
                 div.className = 'log-entry';
                 div.textContent = `[${log.timestamp}] ${log.type}: ${log.message}`;
